@@ -34,14 +34,21 @@ public class RocketController : MonoBehaviour
             StartCoroutine(coroutine);
         }
     }
+
     public IEnumerator Homing(GameObject rocket)
     {
-        while (Vector3.Distance(targetController.target.transform.position, rocket.transform.position) > 0.3f)
+        while (targetController.target != null && Vector3.Distance(targetController.target.transform.position, rocket.transform.position) > 0.3)
         {
             rocket.transform.position += (targetController.target.transform.position - rocket.transform.position).normalized * speed * Time.deltaTime;
             rocket.transform.LookAt(targetController.target.transform);
             yield return null;
         }
+
+        if (targetController.target != null)
+        {
+            targetController.target.GetComponent<Target>().HP -= 10.0f;
+        }
+
         Destroy(rocket);
     }
 }
