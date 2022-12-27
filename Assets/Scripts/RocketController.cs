@@ -14,7 +14,7 @@ public class RocketController : MonoBehaviour
     private GameObject playerContainer;
 
 
-    [Range(0.00f, 10.0f)]
+    [Range(0.00f, 30.0f)]
     public float speed = 0.0f;
 
     public bool fire = false;
@@ -45,7 +45,7 @@ public class RocketController : MonoBehaviour
             foreach (GameObject spawnPoint in spawnPoints)
             {
                 GameObject rocket = Instantiate(rocketPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
-                rocket.transform.LookAt(targetController.target.transform);
+                //rocket.transform.LookAt(targetController.target.transform);
                 rocket.transform.parent = playerContainer.transform;
 
                 IEnumerator coroutine = Homing(rocket);
@@ -56,7 +56,7 @@ public class RocketController : MonoBehaviour
 
     public IEnumerator Homing(GameObject rocket)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
 
         while (targetController.target != null && Vector3.Distance(targetController.target.transform.position, rocket.transform.position) > 0.3)
         {
