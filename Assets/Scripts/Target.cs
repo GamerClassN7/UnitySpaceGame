@@ -9,12 +9,12 @@ public class Target : MonoBehaviour
     public string Name = "Goliáš";
     public TargetType type = new TargetType();
 
-    public TargetController TargetController;
+    private TargetController TargetController;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        TargetController = GameObject.Find("Ship").GetComponent<TargetController>();
     }
 
     // Update is called once per frame

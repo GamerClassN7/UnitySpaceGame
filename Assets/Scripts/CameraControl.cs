@@ -27,7 +27,7 @@ public class CameraControl : MonoBehaviour
             Debug.Log("Pressed right preset.");
             mouseButtonLeftHeld = true;
         }
-        else if (Input.GetMouseButtonUp(1))
+        else if (mouseButtonLeftHeld == true && Input.GetMouseButtonUp(1))
         {
             Debug.Log("Pressed right released.");
             mouseButtonLeftHeld = false;
