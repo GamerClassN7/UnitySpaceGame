@@ -10,10 +10,6 @@ public class CameraControl : MonoBehaviour
     public float smoothFactor = 0.5f;
 
     public float rotationSpeed = 5.0f;
-    public bool mouseButtonLeftHeld = false;
-
-    private float cameraRotationX;
-    private float cameraRotationY;
 
     void Start()
     {
@@ -22,17 +18,7 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("Pressed right preset.");
-            mouseButtonLeftHeld = true;
-        }
-        else if (mouseButtonLeftHeld == true && Input.GetMouseButtonUp(1))
-        {
-            Debug.Log("Pressed right released.");
-            mouseButtonLeftHeld = false;
-        }
-        RotateCameraAround(mouseButtonLeftHeld);
+        RotateCameraAround(Input.GetMouseButton(1));
     }
 
     private void RotateCameraAround(bool rotateAroundPlayer = false)
