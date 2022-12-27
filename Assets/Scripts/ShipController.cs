@@ -8,8 +8,8 @@ public class ShipController : MonoBehaviour
     public Transform thisShip;
     public Slider throttleSlider;
     public GameObject trusters;
-
-
+    public float HP = 100.0f;
+    public Slider healthSlider;
     public Rigidbody r;
     //public Camera c;
 
@@ -26,12 +26,16 @@ public class ShipController : MonoBehaviour
 
         throttleSlider.minValue = 0.0f;
         throttleSlider.maxValue = 1.0f;
+
+        healthSlider.minValue = 0.0f;
+        healthSlider.maxValue = HP;
     }
 
     private void FixedUpdate()
     {
         Turn();
         Trust();
+        healthSlider.value = HP;
     }
 
     void Turn()

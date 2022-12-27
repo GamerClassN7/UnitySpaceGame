@@ -18,7 +18,7 @@ public class TargetController : MonoBehaviour
         originalTarget = Camera.cameraTarget;
 
         targetHealthSlider.minValue = 0.0f;
-        targetHealthSlider.maxValue = 100.0f;
+        targetHealthSlider.maxValue = 100.0f; //target.GetComponent<Target>().HP;
     }
 
     // Update is called once per frame
