@@ -736,12 +736,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a936fb74d8bce44956cf1f47527e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetController: {fileID: 7481410181372000885}
   spawnPoints:
   - {fileID: 7481410179756355265}
   - {fileID: 7481410181166885508}
+  targetController: {fileID: 7481410181372000885}
   rocketPrefab: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
-  speed: 10
   fire: 0
 --- !u!114 &7481410181372000885
 MonoBehaviour:
