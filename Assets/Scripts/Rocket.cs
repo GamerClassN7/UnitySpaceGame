@@ -7,6 +7,7 @@ public class Rocket : MonoBehaviour
     [Range(0.00f, 100.0f)]
     public float speed = 0.0f;
     public GameObject target;
+    public float damage = 30.0f;
 
     void Start()
     {
@@ -27,12 +28,15 @@ public class Rocket : MonoBehaviour
         {
             rocket.transform.position += (target.transform.position - rocket.transform.position).normalized * speed * Time.deltaTime;
             rocket.transform.LookAt(target.transform);
+
+            Debug.DrawLine(rocket.transform.position, target.transform.position);
+
             yield return null;
         }
 
         if (target != null)
         {
-            target.GetComponent<Target>().HP -= 10.0f;
+            target.GetComponent<Target>().HP -= damage;
         }
 
         Destroy(rocket);

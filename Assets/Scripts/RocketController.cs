@@ -7,7 +7,6 @@ public class RocketController : MonoBehaviour
     [SerializeField]
     private GameObject[] spawnPoints;
     public TargetController targetController;
-    public GameObject rocketPrefab;
     private GameObject playerContainer;
 
     public bool fire = false;
@@ -35,11 +34,14 @@ public class RocketController : MonoBehaviour
     {
         if (targetController.target != null && targetController.target.scene.IsValid())
         {
-            foreach (GameObject spawnPoint in spawnPoints)
+            foreach (GameObject rocketTube in spawnPoints)
             {
-                GameObject rocket = Instantiate(rocketPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
-                rocket.transform.parent = playerContainer.transform;
-                rocket.GetComponent<Rocket>().target = targetController.target;
+                if (rocketTube.gameObject.GetComponent<Weapon>() != null)
+                {
+                    GameObject rocket = Instantiate(rocketTube.gameObject.GetComponent<Weapon>().projectile, rocketTube.transform.position, rocketTube.transform.rotation);
+                    rocket.transform.parent = playerContainer.transform;
+                    rocket.GetComponent<Rocket>().target = targetController.target;
+                }
             }
         }
     }

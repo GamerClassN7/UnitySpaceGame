@@ -7,16 +7,35 @@ public class Turret : MonoBehaviour
 
     public GameObject barrel;
     public GameObject target;
+    public GameObject projectileSpawn;
+    public Weapon weapon;
+    public float range = 200.0f;
+    private float nextActionTime = 0.0f;
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (target != null)
         {
             Aim();
+            if (Physics.Raycast(projectileSpawn.transform.position, projectileSpawn.transform.forward))
+            {
+                FireProjectile(projectileSpawn.transform, weapon, target);
+            }
+        }
+        else
+        {
+            nextActionTime = Time.time;
         }
     }
 
+    private void FireProjectile(Transform projectileSpawn, Weapon weapon, GameObject target)
+    {
+        if (Time.time > nextActionTime && target != null)
+        {
+            nextActionTime += 2.0f;
+            weapon.Fire(projectileSpawn, target);
+        }
+    }
     private void Aim()
     {
         ////LEFT/RIGHT
