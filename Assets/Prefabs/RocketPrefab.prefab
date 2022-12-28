@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   target: {fileID: 0}
+  damage: 30
+  oneTime: 1
 --- !u!1 &5602281515805069547
 GameObject:
   m_ObjectHideFlags: 0

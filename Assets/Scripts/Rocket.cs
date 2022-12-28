@@ -8,16 +8,28 @@ public class Rocket : MonoBehaviour
     public float speed = 0.0f;
     public GameObject target;
     public float damage = 30.0f;
+    private float timer = 0f;
+    public bool oneTime = true;
 
     void Start()
     {
-        IEnumerator coroutine = Homing(this.gameObject);
-        StartCoroutine(coroutine);
+        timer = Time.time + 1f;
     }
 
     void Update()
     {
-
+        if (timer < Time.time)
+        {
+            if (oneTime == true) {
+                oneTime = false;
+                IEnumerator coroutine = Homing(this.gameObject);
+                StartCoroutine(coroutine);
+            }
+        } 
+        else
+        {
+            this.gameObject.transform.position += (this.gameObject.transform.up * speed * Time.deltaTime);
+        }
     }
 
     public IEnumerator Homing(GameObject rocket)
