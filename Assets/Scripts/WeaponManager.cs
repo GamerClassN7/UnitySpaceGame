@@ -45,8 +45,10 @@ public class WeaponManager : MonoBehaviour
         if (weapons[index].GetComponent<Weapon>().thumbnail == null)
         {
             weaponImage.GetComponent<RawImage>().texture = null;
-            return;
         }
-        weaponImage.GetComponent<RawImage>().texture = weapons[index].GetComponent<Weapon>().thumbnail;
+        else
+        {
+            weaponImage.GetComponent<RawImage>().texture = weapons[index].GetComponent<Weapon>().thumbnail;
+        }
     }
 }

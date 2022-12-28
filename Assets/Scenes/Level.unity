@@ -273,6 +273,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &142464672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3170535183896795163, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &186573034
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +796,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474637448}
   m_CullTransparentMesh: 1
+--- !u!1 &502733395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5247987465798240016, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612945652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1028,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4592856622101515895, guid: d8f586d26a3cbe448a48046e6f06d00f, type: 3}
   m_PrefabInstance: {fileID: 1884652164}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &773243666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4742693335695657869, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &794947449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,14 +1185,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831416472}
   m_CullTransparentMesh: 1
---- !u!1 &845709130 stripped
+--- !u!1 &1102706164 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 845709130, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
-  m_PrefabInstance: {fileID: 1622929171}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1205154812 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7481410181372000880, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1063099412196444544, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
   m_PrefabInstance: {fileID: 1622929171}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265140007
@@ -1271,11 +1281,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1299273075 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1299273075, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
-  m_PrefabInstance: {fileID: 1622929171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1338350707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,22 +1551,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7481410181372000881, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
   m_PrefabInstance: {fileID: 1622929171}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1547630983
+--- !u!114 &1547630984 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7481410181372000885, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205154812}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af58cbd9e6087cb4984eaf12a927e27b, type: 3}
+  m_Script: {fileID: 11500000, guid: ce7bc5d6edb8fd14a8cbc2ac326c2bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 1299273075}
-  - {fileID: 845709130}
-  weaponImage: {fileID: 325238388}
+--- !u!1 &1573432700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3011701069868578713, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1597998148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2908169446928860939, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1622929171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1569,10 +1579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 399984496}
     m_Modifications:
-    - target: {fileID: 1999471876690668558, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
-      propertyPath: thumbnail
+    - target: {fileID: 1547630983, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+      propertyPath: weaponImage
       value: 
-      objectReference: {fileID: 2800000, guid: 38a5a720f537f444e9ee3f63958da7a1, type: 3}
+      objectReference: {fileID: 325238388}
     - target: {fileID: 7481410181372000880, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -1637,8 +1647,7 @@ PrefabInstance:
       propertyPath: throttleSlider
       value: 
       objectReference: {fileID: 1265140009}
-    m_RemovedComponents:
-    - {fileID: 153348467, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
 --- !u!1001 &1884652164
 PrefabInstance:
@@ -1821,6 +1830,43 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2034062503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2909035495717029369, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2034062505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5588533592624207269, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034062503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347879513a5a4fe42819200af98c4edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2034062508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034062503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc9dae09b473114a9f26aab0b62c4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketTubes:
+  - {fileID: 142464672}
+  - {fileID: 1573432700}
+  - {fileID: 773243666}
+  - {fileID: 1102706164}
+  - {fileID: 1597998148}
+  - {fileID: 502733395}
+  targetController: {fileID: 1547630984}
+  weapon: {fileID: 2034062505}
 --- !u!1 &2089155451
 GameObject:
   m_ObjectHideFlags: 0

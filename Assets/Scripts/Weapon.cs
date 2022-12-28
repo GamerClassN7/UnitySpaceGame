@@ -10,7 +10,6 @@ public class Weapon : MonoBehaviour
     public float projectileSpeed = 20.0f;
     private GameObject playerContainer;
 
-
     void Start()
     {
         playerContainer = GameObject.Find("=PROJECTILES=");
