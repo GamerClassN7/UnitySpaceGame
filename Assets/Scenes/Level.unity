@@ -734,6 +734,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &430863467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7481410179756355265, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &430863469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430863467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347879513a5a4fe42819200af98c4edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Rockets
+  thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
+  projectile: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
+  speed: 20
 --- !u!1 &437592581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,6 +1287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Weapon 1 '
   thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
+  projectile: {fileID: 0}
+  speed: 20
 --- !u!1 &1265140007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,6 +1426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 'Weapon 1 '
   thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
+  projectile: {fileID: 0}
+  speed: 20
 --- !u!1 &1338350707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1705,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 399984496}
     m_Modifications:
+    - target: {fileID: 4273187220287158651, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+      propertyPath: Name
+      value: Turret2
+      objectReference: {fileID: 0}
     - target: {fileID: 7481410181372000880, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
       propertyPath: m_Name
       value: Ship
@@ -1927,6 +1956,27 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2009418578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7481410181166885508, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+  m_PrefabInstance: {fileID: 1622929171}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2009418580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009418578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347879513a5a4fe42819200af98c4edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Rockets 2
+  thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
+  projectile: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
+  speed: 20
 --- !u!1 &2089155451
 GameObject:
   m_ObjectHideFlags: 0
