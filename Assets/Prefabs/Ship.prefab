@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7481410179756355270}
+  - component: {fileID: 430863469}
   m_Layer: 0
   m_Name: rocket_tube_right
   m_TagString: Untagged
@@ -64,6 +65,22 @@ Transform:
   m_Father: {fileID: 6942852526419524972}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430863469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481410179756355265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347879513a5a4fe42819200af98c4edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Rockets
+  thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
+  projectile: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
+  speed: 20
 --- !u!1 &7481410179805324087
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +275,6 @@ MonoBehaviour:
   cameraTarget: {fileID: 6942852526419524972}
   smoothFactor: 0.183
   rotationSpeed: 5
-  mouseButtonLeftHeld: 0
 --- !u!1 &7481410180806054972
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7481410181166885509}
+  - component: {fileID: 2009418580}
   m_Layer: 0
   m_Name: rocket_tube_left
   m_TagString: Untagged
@@ -525,6 +542,22 @@ Transform:
   m_Father: {fileID: 6942852526419524972}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2009418580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7481410181166885508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347879513a5a4fe42819200af98c4edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Rockets 2
+  thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
+  projectile: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
+  speed: 20
 --- !u!1 &7481410181337533646
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +773,6 @@ MonoBehaviour:
   - {fileID: 7481410179756355265}
   - {fileID: 7481410181166885508}
   targetController: {fileID: 7481410181372000885}
-  rocketPrefab: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
   fire: 0
 --- !u!114 &7481410181372000885
 MonoBehaviour:
@@ -781,6 +813,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6942852526419524972}
     m_Modifications:
+    - target: {fileID: 4273187218542737970, guid: 3c75c3094a0bc244f98c476bc5d9f291, type: 3}
+      propertyPath: Name
+      value: Turret2
+      objectReference: {fileID: 0}
     - target: {fileID: 4427923513458716399, guid: 3c75c3094a0bc244f98c476bc5d9f291, type: 3}
       propertyPath: m_Name
       value: turret_front
@@ -799,7 +835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7253449526850478018, guid: 3c75c3094a0bc244f98c476bc5d9f291, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.03
+      value: 7.08
       objectReference: {fileID: 0}
     - target: {fileID: 7253449526850478018, guid: 3c75c3094a0bc244f98c476bc5d9f291, type: 3}
       propertyPath: m_LocalRotation.w
@@ -857,7 +893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7253449526850478018, guid: 3c75c3094a0bc244f98c476bc5d9f291, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.18
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 7253449526850478018, guid: 3c75c3094a0bc244f98c476bc5d9f291, type: 3}
       propertyPath: m_LocalPosition.z

@@ -17,8 +17,11 @@ public class Turret : MonoBehaviour
         if (target != null)
         {
             Aim();
+            Debug.DrawRay(projectileSpawn.transform.position, projectileSpawn.transform.forward, Color.blue);
             if (Physics.Raycast(projectileSpawn.transform.position, projectileSpawn.transform.forward))
             {
+
+                Debug.Log("Object Hit");
                 FireProjectile(projectileSpawn.transform, weapon, target);
             }
         }
