@@ -37,7 +37,6 @@ public class Target : MonoBehaviour
         if (HP <= 0.0f)
         {
             Destroy(this.gameObject);
-            return;
         }
     }
 }

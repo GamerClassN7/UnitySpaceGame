@@ -9,11 +9,6 @@ public class TurretController : MonoBehaviour
     public TargetController targetController;
     public Weapon weapon;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void LateUpdate()
     {
@@ -21,7 +16,6 @@ public class TurretController : MonoBehaviour
         {
             turret.GetComponent<Turret>().target = targetController.target;
             turret.GetComponent<Turret>().weapon = weapon;
-
         }
     }
 }

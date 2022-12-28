@@ -9,6 +9,7 @@ public class WeaponManager : MonoBehaviour
     private GameObject[] weapons;
     private int weaponIndex = 0;
     public GameObject weaponImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,15 @@ public class WeaponManager : MonoBehaviour
         }
 
         selectWeapon(weaponIndex);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (weapons[weaponIndex].GetComponent<RocketTubeController>() != null)
+            {
+                weapons[weaponIndex].GetComponent<RocketTubeController>().Fire();
+                Debug.Log("WEAPON_" + weaponIndex + "_FIRE");
+            }
+        }
     }
 
     private void selectWeapon(int index)

@@ -9,41 +9,26 @@ public class RocketTubeController : MonoBehaviour
     public TargetController targetController;
     private GameObject playerContainer;
     public Weapon weapon;
-    // Start is called before the first frame update
+
     void Start()
     {
-        Debug.Log("Init RocketTubes");
+        playerContainer = GameObject.Find("=PROJECTILES=");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            //Fire();
-        }
-        Debug.Log("Update RocketTubes");
-        foreach (GameObject rocketTube in rocketTubes)
-        {
-            Debug.Log(rocketTube.name);
-
-        }
-    }
-
-    private void Fire()
+    public void Fire()
     {
         Debug.Log("Fire Rocket");
         if (targetController.target != null && targetController.target.scene.IsValid())
         {
             foreach (GameObject rocketTube in rocketTubes)
             {
-                // Debug.Log("Spawn Rocket");
-                // Debug.Log(rocketTube.GetComponent<RocketTube>().spawnPoint.transform);
+                Debug.Log("Spawn Rocket");
+                Debug.Log(rocketTube.GetComponent<RocketTube>().spawnPoint.transform);
 
-                // Transform SpawnPoint = rocketTube.GetComponent<RocketTube>().spawnPoint.transform;
-                // GameObject rocket = Instantiate(weapon.projectile, rocketTube.transform.position, rocketTube.transform.rotation);
-                // rocket.transform.parent = playerContainer.transform;
-                // rocket.GetComponent<Rocket>().target = targetController.target;
+                Transform SpawnPoint = rocketTube.GetComponent<RocketTube>().spawnPoint.transform;
+                GameObject rocket = Instantiate(weapon.projectile, SpawnPoint.position, SpawnPoint.rotation);
+                rocket.transform.parent = playerContainer.transform;
+                rocket.GetComponent<Rocket>().target = targetController.target;
             }
         }
     }
