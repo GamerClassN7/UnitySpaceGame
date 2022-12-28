@@ -1709,6 +1709,14 @@ PrefabInstance:
       propertyPath: Name
       value: Turret2
       objectReference: {fileID: 0}
+    - target: {fileID: 6830768192883064823, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253449528595651723, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7481410181372000880, guid: f60ba8e594f9e284e99cce6f43b78464, type: 3}
       propertyPath: m_Name
       value: Ship
