@@ -7,7 +7,7 @@ public class TurretController : MonoBehaviour
     [SerializeField]
     private GameObject[] turrets;
     public TargetController targetController;
-
+    public Weapon weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,8 @@ public class TurretController : MonoBehaviour
         foreach (GameObject turret in turrets)
         {
             turret.GetComponent<Turret>().target = targetController.target;
+            turret.GetComponent<Turret>().weapon = weapon;
+
         }
     }
-
-
 }

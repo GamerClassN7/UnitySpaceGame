@@ -8,6 +8,8 @@ public class RocketController : MonoBehaviour
     private GameObject[] spawnPoints;
     public TargetController targetController;
     private GameObject playerContainer;
+    public Weapon weapon;
+
 
     public bool fire = false;
 
@@ -36,12 +38,11 @@ public class RocketController : MonoBehaviour
         {
             foreach (GameObject rocketTube in spawnPoints)
             {
-                if (rocketTube.gameObject.GetComponent<Weapon>() != null)
-                {
-                    GameObject rocket = Instantiate(rocketTube.gameObject.GetComponent<Weapon>().projectile, rocketTube.transform.position, rocketTube.transform.rotation);
-                    rocket.transform.parent = playerContainer.transform;
-                    rocket.GetComponent<Rocket>().target = targetController.target;
-                }
+
+                GameObject rocket = Instantiate(weapon.projectile, rocketTube.transform.position, rocketTube.transform.rotation);
+                rocket.transform.parent = playerContainer.transform;
+                rocket.GetComponent<Rocket>().target = targetController.target;
+
             }
         }
     }

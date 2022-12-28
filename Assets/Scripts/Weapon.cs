@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     public string Name;
     public Texture thumbnail;
     public GameObject projectile;
-    public float speed = 20.0f;
+    public float projectileSpeed = 20.0f;
     private GameObject playerContainer;
 
 
@@ -29,6 +29,6 @@ public class Weapon : MonoBehaviour
         }
 
         newProjectile.transform.parent = playerContainer.transform;
-        newProjectile.GetComponent<Rigidbody>().velocity = spawnPoint.transform.TransformDirection(Vector3.forward * speed);
+        newProjectile.GetComponent<Rigidbody>().velocity = spawnPoint.transform.TransformDirection(Vector3.forward * projectileSpeed);
     }
 }
