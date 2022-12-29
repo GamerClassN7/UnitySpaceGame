@@ -17,6 +17,11 @@ public class MineLauncherController : MonoBehaviour
 
     public void Fire()
     {
+        if (weapon.ammo <= 0)
+        {
+            return;
+        }
+
         Debug.Log("Mine Launched");
         foreach (GameObject mineLauncher in mineLaunchers)
         {
@@ -26,6 +31,7 @@ public class MineLauncherController : MonoBehaviour
             Transform SpawnPoint = mineLauncher.GetComponent<MineLauncher>().spawnPoint.transform;
             GameObject rocket = Instantiate(weapon.projectile, SpawnPoint.position, SpawnPoint.rotation);
             rocket.transform.parent = playerContainer.transform;
+            weapon.ammo--;
         }
     }
 }

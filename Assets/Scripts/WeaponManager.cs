@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WeaponManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class WeaponManager : MonoBehaviour
     private GameObject[] weapons;
     private int weaponIndex = 0;
     public GameObject weaponImage;
+    public GameObject weaponText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +35,6 @@ public class WeaponManager : MonoBehaviour
             }
             Debug.Log("WEAPON_" + weaponIndex);
         }
-
         selectWeapon(weaponIndex);
 
         if (Input.GetButtonDown("Jump"))
@@ -40,7 +42,6 @@ public class WeaponManager : MonoBehaviour
             if (weapons[weaponIndex].GetComponent<RocketTubeController>() != null)
             {
                 weapons[weaponIndex].GetComponent<RocketTubeController>().Fire();
-
             }
             else if (weapons[weaponIndex].GetComponent<MineLauncherController>() != null)
             {
@@ -61,13 +62,15 @@ public class WeaponManager : MonoBehaviour
             weapon.SetActive(false);
         }
         weapons[index].SetActive(true);
-        if (weapons[index].GetComponent<Weapon>().thumbnail == null)
-        {
-            weaponImage.GetComponent<RawImage>().texture = null;
-        }
-        else
+
+        if (weapons[index].GetComponent<Weapon>().thumbnail != null)
         {
             weaponImage.GetComponent<RawImage>().texture = weapons[index].GetComponent<Weapon>().thumbnail;
+            weaponText.GetComponent<TMP_Text>().text = weapons[index].GetComponent<Weapon>().ammo.ToString();
+            return;
         }
+
+        weaponImage.GetComponent<RawImage>().texture = null;
+        weaponText.GetComponent<TMP_Text>().text = "";
     }
 }

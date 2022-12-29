@@ -17,6 +17,11 @@ public class RocketTubeController : MonoBehaviour
 
     public void Fire()
     {
+        if (weapon.ammo <= 0)
+        {
+            return;
+        }
+
         Debug.Log("Fire Rocket");
         if (targetController.target != null && targetController.target.scene.IsValid())
         {
@@ -29,6 +34,7 @@ public class RocketTubeController : MonoBehaviour
                 GameObject rocket = Instantiate(weapon.projectile, SpawnPoint.position, SpawnPoint.rotation);
                 rocket.transform.parent = playerContainer.transform;
                 rocket.GetComponent<Rocket>().target = targetController.target;
+                weapon.ammo--;
             }
         }
     }

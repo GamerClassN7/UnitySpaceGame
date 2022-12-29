@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     public Texture thumbnail;
     public GameObject projectile;
     public float projectileSpeed = 20.0f;
+    public int ammo = 10;
+
     private GameObject playerContainer;
 
     void Start()
