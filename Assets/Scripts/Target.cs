@@ -21,8 +21,6 @@ public class Target : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("Clicked");
-
-        HP -= 10.0f;
         TargetController.target = this.gameObject;
     }
 
@@ -44,5 +42,6 @@ public class Target : MonoBehaviour
 public enum TargetType
 {
     Asteroid,
-    EnemyShip
+    EnemyShip,
+    Test
 };

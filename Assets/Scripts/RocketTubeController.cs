@@ -27,6 +27,11 @@ public class RocketTubeController : MonoBehaviour
         {
             foreach (GameObject rocketTube in rocketTubes)
             {
+                if (weapon.ammo <= 0)
+                {
+                    continue;
+                }
+
                 Debug.Log("Spawn Rocket");
                 Debug.Log(rocketTube.GetComponent<RocketTube>().spawnPoint.transform);
 

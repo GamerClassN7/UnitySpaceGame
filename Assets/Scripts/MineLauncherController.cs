@@ -25,6 +25,11 @@ public class MineLauncherController : MonoBehaviour
         Debug.Log("Mine Launched");
         foreach (GameObject mineLauncher in mineLaunchers)
         {
+            if (weapon.ammo <= 0)
+            {
+                continue;
+            }
+
             Debug.Log("Mine Spawned");
             Debug.Log(mineLauncher.GetComponent<MineLauncher>().spawnPoint.transform);
 
