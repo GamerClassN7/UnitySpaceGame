@@ -49,7 +49,7 @@ MonoBehaviour:
   speed: 60
   target: {fileID: 0}
   damage: 30
-  oneTime: 1
+  coldLaunchTimer: 0.1
 --- !u!1 &5602281515805069547
 GameObject:
   m_ObjectHideFlags: 0

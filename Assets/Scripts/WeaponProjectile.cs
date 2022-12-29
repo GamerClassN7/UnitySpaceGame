@@ -14,18 +14,41 @@ public class WeaponProjectile : MonoBehaviour
 
     void Update()
     {
-        Destroy(this.gameObject, tileToLive);
+        if (tileToLive > 0)
+        {
+            Destroy(this.gameObject, tileToLive);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        explosionEffect.Play(true);
+
         if (collision.gameObject.GetComponent<Target>() != null)
         {
-            explosionEffect.Play(true);
-
             collision.gameObject.GetComponent<Target>().HP -= damage;
-
-            Destroy(this.gameObject);
         }
+
+        GetShipController(collision).HP -= damage;
+
+        Destroy(this.gameObject);
+        Debug.Log(collision.gameObject.name);
+    }
+
+    private ShipController GetShipController(Collision collision)
+    {
+        Transform t = collision.gameObject.transform;
+        while (t.transform.parent != null)
+        {
+            if (t.gameObject.GetComponent<ShipController>() != null)
+            {
+                Debug.Log("Ship Controller Found");
+                return t.gameObject.GetComponent<ShipController>();
+            }
+            t = t.transform.parent;
+        }
+
+        return null;
     }
 }
+

@@ -40,8 +40,12 @@ public class WeaponManager : MonoBehaviour
             if (weapons[weaponIndex].GetComponent<RocketTubeController>() != null)
             {
                 weapons[weaponIndex].GetComponent<RocketTubeController>().Fire();
-                Debug.Log("WEAPON_" + weaponIndex + "_FIRE");
+               
+            } else if (weapons[weaponIndex].GetComponent<MineLauncherController>() != null)
+            {
+                weapons[weaponIndex].GetComponent<MineLauncherController>().Fire();
             }
+                Debug.Log("WEAPON_" + weaponIndex + "_FIRE");
         }
     }
 

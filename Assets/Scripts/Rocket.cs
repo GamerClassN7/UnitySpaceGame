@@ -8,12 +8,16 @@ public class Rocket : MonoBehaviour
     public float speed = 0.0f;
     public GameObject target;
     public float damage = 30.0f;
+
+    //Cold Launch
     private float timer = 0f;
-    public bool oneTime = true;
+    private bool oneTime = true;
+    [Range(0.00f, 1.0f)]
+    public float coldLaunchTimer = 1f;
 
     void Start()
     {
-        timer = Time.time + 1f;
+        timer = Time.time + coldLaunchTimer;
     }
 
     void Update()
@@ -34,7 +38,7 @@ public class Rocket : MonoBehaviour
 
     public IEnumerator Homing(GameObject rocket)
     {
-        yield return new WaitForSeconds(0.3f);
+        //yield return new WaitForSeconds(0.3f);
 
         while (target != null && Vector3.Distance(target.transform.position, rocket.transform.position) > 0.3)
         {
