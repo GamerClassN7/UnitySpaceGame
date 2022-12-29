@@ -16,6 +16,19 @@ public class TurretController : MonoBehaviour
         {
             turret.GetComponent<Turret>().target = targetController.target;
             turret.GetComponent<Turret>().weapon = weapon;
+            if (targetController.target == null)
+            {
+                turret.GetComponent<Turret>().fire = false;
+            }
+        }
+
+    }
+
+    public void Fire()
+    {
+        foreach (GameObject turret in turrets)
+        {
+            turret.GetComponent<Turret>().fire = true;
         }
     }
 }

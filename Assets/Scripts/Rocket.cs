@@ -17,19 +17,20 @@ public class Rocket : MonoBehaviour
 
     void Start()
     {
-        timer = Time.time + coldLaunchTimer;
+        timer = Time.time + 1f;
     }
 
     void Update()
     {
         if (timer < Time.time)
         {
-            if (oneTime == true) {
+            if (oneTime == true)
+            {
                 oneTime = false;
                 IEnumerator coroutine = Homing(this.gameObject);
                 StartCoroutine(coroutine);
             }
-        } 
+        }
         else
         {
             this.gameObject.transform.position += (this.gameObject.transform.up * speed * Time.deltaTime);

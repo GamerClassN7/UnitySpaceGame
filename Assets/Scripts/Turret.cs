@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour
     public Weapon weapon;
     public float range = 200.0f;
     private float nextActionTime = 0.0f;
+    public bool fire = false;
 
     void LateUpdate()
     {
@@ -18,17 +19,14 @@ public class Turret : MonoBehaviour
         {
             Aim();
             Debug.DrawRay(projectileSpawn.transform.position, projectileSpawn.transform.forward, Color.blue);
-            if (Physics.Raycast(projectileSpawn.transform.position, projectileSpawn.transform.forward))
+            if (Physics.Raycast(projectileSpawn.transform.position, projectileSpawn.transform.forward) && fire)
             {
-
                 Debug.Log("Object Hit");
                 FireProjectile(projectileSpawn.transform, weapon, target);
             }
+            return;
         }
-        else
-        {
-            nextActionTime = Time.time;
-        }
+        nextActionTime = Time.time;
     }
 
     private void FireProjectile(Transform projectileSpawn, Weapon weapon, GameObject target)
