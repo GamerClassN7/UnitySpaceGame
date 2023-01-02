@@ -40,9 +40,9 @@ public class Turret : MonoBehaviour
     private void Aim()
     {
         ////LEFT/RIGHT
-        //float targetPlaneAngle = Vector3AngleOnPlane(target.transform.position, transform.position, -transform.up, transform.forward);
-        //Vector3 newRotation = new Vector3(0, targetPlaneAngle, 0);
-        //transform.Rotate(newRotation, Space.Self);
+        float targetPlaneAngle = Vector3AngleOnPlane(target.transform.position, transform.position, -transform.up, transform.forward);
+        Vector3 newRotation = new Vector3(0, targetPlaneAngle, 0);
+        transform.Rotate(newRotation, Space.Self);
 
         ////UP/DOWN
         //float upAngle = Vector3.Angle(target.transform.position, barrel.transform.up);
@@ -51,8 +51,9 @@ public class Turret : MonoBehaviour
         //barrel.transform.Rotate(upRotation, Space.Self);
 
         Vector3 direction = target.transform.position - barrel.transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(direction, transform.up);
+        Quaternion lookRotation = Quaternion.LookRotation(direction, barrel.transform.up);
         Quaternion rotate = Quaternion.RotateTowards(barrel.transform.rotation, lookRotation, 100f * Time.deltaTime);
+        Vector3.Angle(transform.up, direction);
         barrel.transform.rotation = rotate;
 
         Debug.DrawLine(barrel.transform.position, target.transform.position);
