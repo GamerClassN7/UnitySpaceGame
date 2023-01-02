@@ -162,6 +162,7 @@ MonoBehaviour:
   thumbnail: {fileID: 2800000, guid: 38a5a720f537f444e9ee3f63958da7a1, type: 3}
   projectile: {fileID: 3734594873168542037, guid: b45a51da6dc143040b8360a75be06c36, type: 3}
   projectileSpeed: 20
+  ammo: 10
 --- !u!114 &1299273078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +230,7 @@ MonoBehaviour:
   thumbnail: {fileID: 2800000, guid: 1a075a186c36133429bb66866682594c, type: 3}
   projectile: {fileID: 655084776861941680, guid: ee03e62a047d851478e472cd4a254c0d, type: 3}
   projectileSpeed: 20
+  ammo: 10
 --- !u!114 &2031615140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +518,7 @@ MonoBehaviour:
   thumbnail: {fileID: 2800000, guid: 5a3428b938a0c8b42bccca0d726579d4, type: 3}
   projectile: {fileID: 2382167596881661938, guid: 7b1d918d35daefe468765b22ce8f6d9c, type: 3}
   projectileSpeed: 20
+  ammo: 10
 --- !u!114 &2034062508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +971,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 60000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1115,10 +1118,10 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.9796114, a: 1}
-      key1: {r: 0.07450981, g: 1, b: 1, a: 0.48235294}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0, g: 1, b: 0.9796114, a: 0}
+      key1: {r: 0.07450981, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0.8964743}
+      key3: {r: 0, g: 0, b: 0, a: 0.48235294}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -1132,16 +1135,16 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
+      atime1: 12722
+      atime2: 33346
+      atime3: 65535
       atime4: 0
       atime5: 0
       atime6: 0
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 4
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -1350,10 +1353,10 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.9796114, a: 1}
-      key1: {r: 0.07450981, g: 1, b: 1, a: 0.48235294}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0, g: 1, b: 0.9796114, a: 0}
+      key1: {r: 0.07450981, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0.8964743}
+      key3: {r: 0, g: 0, b: 0, a: 0.48235294}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -1367,16 +1370,16 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
+      atime1: 12722
+      atime2: 33346
+      atime3: 65535
       atime4: 0
       atime5: 0
       atime6: 0
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 4
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
@@ -1476,6 +1479,7 @@ MonoBehaviour:
   - {fileID: 2909035495717029369}
   - {fileID: 2031615138}
   weaponImage: {fileID: 0}
+  weaponText: {fileID: 0}
 --- !u!1001 &2014233417
 PrefabInstance:
   m_ObjectHideFlags: 0
