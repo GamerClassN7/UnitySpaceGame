@@ -27,7 +27,6 @@ public class WeaponProjectile : MonoBehaviour
         // {
         //     //GetShipController(collision).HP -= damage;
         // }
-
         Destroy(this.gameObject);
         Debug.Log("PROJECTILE_HIT_" + collision.gameObject.name);
     }

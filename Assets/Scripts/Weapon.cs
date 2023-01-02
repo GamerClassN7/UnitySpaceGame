@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
     }
     public void Fire(Transform spawnPoint, GameObject target)
     {
-        GameObject newProjectile = Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
+        GameObject newProjectile = Instantiate(projectile, spawnPoint.position + spawnPoint.forward, spawnPoint.rotation);
 
         if (newProjectile.GetComponent<Turret>() != null)
         {
